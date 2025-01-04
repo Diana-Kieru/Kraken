@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#757575</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="green">#4CAF50</color>
+    <color name="purple">#6200EE</color>
+    <color name="light_purple">#F2E7FE</color>
+    <!-- Update these colors in your colors.xml -->
+    <color name="purple_button_bg">#5B21B6</color>  <!-- This is closer to the screenshot's button background -->
+    <color name="purple_text">#A78BFA</color>      <!-- This is for the lighter purple text -->
+    <color name="dark_gray">#212121</color>        <!-- Added new color -->
+</resources>

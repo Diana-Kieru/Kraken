@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/outline_arrow_back_ios_new_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Withdraw"
+                android:textColor="@color/dark_gray"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- USDT Icon -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/tether_usdt_seeklogo" />
+
+        <!-- Total Amount -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:textColor="@color/dark_gray"
+            android:text="251.519 USDT"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- Transaction Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Amount Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Amount" />
+
+                <TextView
+                    style="@style/TransactionValue"
+                    android:text="247.51902 USDT" />
+            </LinearLayout>
+
+            <!-- Fee Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Fee" />
+
+                <TextView
+                    style="@style/TransactionValue"
+                    android:text="4.00 USDT" />
+            </LinearLayout>
+
+            <!-- Total Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Total" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TransactionValue"
+                        android:text="251.51902 USDT" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="≈$251.27"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="≈€230.00"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Status Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Status" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_success_status"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="Success"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+
+            <!-- Network Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Network" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/tron_bitsap" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dark_gray"
+                        android:layout_marginStart="8dp"
+                        android:text="Tron" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Transaction ID Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="On-chain transaction ID" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="2dp"
+                        android:scaleType="fitXY"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/outline_file_copy_24"
+                        android:layout_gravity="top" />
+
+                    <TextView
+                        style="@style/TransactionValue"
+                        android:text="898c4c...932fe0" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Withdrawal Address Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Withdrawal address" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/pan_zoom_24dp_e8eaed_fill0_wght400_grad0_opsz24"
+                        app:tint="@color/gray" />
+                    <TextView
+                        style="@style/TransactionValue"
+                        android:text="TBoFMJx...QLJvmrc" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Date Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Date" />
+
+                <TextView
+                    style="@style/TransactionValue"
+                    android:text="Dec 23, 2024, 8:23 AM" />
+            </LinearLayout>
+
+            <!-- Ref ID Row -->
+            <LinearLayout style="@style/TransactionRow">
+
+                <TextView
+                    style="@style/TransactionLabel"
+                    android:text="Ref ID" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="2dp"
+                        android:scaleType="fitXY"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/outline_file_copy_24"
+                        android:layout_gravity="top" />
+
+                    <TextView
+                        style="@style/TransactionValue"
+                        android:text="FTcbbC-nlwswv...y5zRRlBkk7KJw" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:padding="16dp"
+            android:text="View on blockchain explorer"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            app:backgroundTint="@color/light_purple"
+            app:strokeColor="@color/light_purple"
+            app:strokeWidth="2dp"
+            app:icon="@drawable/outline_ios_share_24"
+            app:iconGravity="textEnd"
+            app:iconPadding="8dp"
+            app:iconTint="@color/purple"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="Total amount displayed in your preferred currency is an estimate based on the exchange rate from the date of the transaction."
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+</ScrollView>
